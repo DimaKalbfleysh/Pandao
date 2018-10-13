@@ -1,4 +1,4 @@
 import cProfile
-from Pandao.Parse import main
+from Pandao import __main__
 
-cProfile.run('main()')
+cProfile.run('Parse.main()')

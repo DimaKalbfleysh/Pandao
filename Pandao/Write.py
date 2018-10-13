@@ -5,6 +5,7 @@ sheet1 = book.add_sheet("Pandao")
 
 
 def saveExcel(column, data, name):
+    """ Функция записывает данные в excel таблицу. """
     sheet1.write(0, column, name)
     row = 1
     for line in data:
