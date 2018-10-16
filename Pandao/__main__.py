@@ -1,3 +1,4 @@
+import threading
 from functools import partial
 from multiprocessing.pool import Pool
 from Pandao.Categories import categories
@@ -15,12 +16,15 @@ def getList(dates):
 
 def pool(searched_data):
     """ Функция возвращает список searched_data"""
-    with Pool(22) as p:
-        data = p.map(partial(getDataLists, searching=searched_data), categories)
-    return data
+    global r
+    for category in categories:
+        r = threading.Thread(target=getDataLists, args=(category, searched_data))
+        r.start()
+    return r
 
 
 def main():
+
     name = getList(pool("data-name"))
     saveExcel(0, name, "Name")
 
