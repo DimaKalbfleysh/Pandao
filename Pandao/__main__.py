@@ -16,11 +16,11 @@ def getList(dates):
 
 def pool(searched_data):
     """ Функция возвращает список searched_data"""
-    global r
+    global data
     for category in categories:
-        r = threading.Thread(target=getDataLists, args=(category, searched_data))
-        r.start()
-    return r
+        data = threading.Thread(target=getDataLists, args=(category, searched_data))
+        data.start()
+    return data
 
 
 def main():
