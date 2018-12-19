@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=D:\Проэкты\Pandao\venv"
+set "VIRTUAL_ENV=D:\Project\Pandao2\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
