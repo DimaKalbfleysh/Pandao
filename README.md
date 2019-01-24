@@ -10,6 +10,6 @@
 ***
 #### Для того чтобы запустить скрипт:
 
-`git clone https://github.com/DimaKalbfleysh/Pandao.git `
+1.`git clone https://github.com/DimaKalbfleysh/Pandao.git `
 
-#### Потом запустить файл ***main***
+2. Запустить файл ***main***.
